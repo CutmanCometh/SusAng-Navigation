@@ -1,0 +1,40 @@
+@import "susy";
+
+$nav: (
+	columns: 12,
+	container: static,
+);
+
+.container{
+	@include container(960px);
+	background-color: #ddddff;
+}
+
+h1.banner{
+	margin: 0 auto;
+	text-align: center;
+}
+
+nav{
+	@include layout($nav);
+	ul{
+		@include span(12);
+		@include push(6);
+		li{
+			@include span (1);
+			list-style-type: none;
+			padding-left: 0;
+		}
+	}
+}
+
+.main-content{
+	@include span(9 of 12);
+	p{
+		@include span(3.9);
+	}
+}
+
+aside{
+	@include span(3 of 12 at 10);
+}
